@@ -1,7 +1,9 @@
 <template>
   <div class="bg-indigo-50 flex">
     <NavBar />
-    <div class="bg-white w-full rounded-tl-xl p-4">content</div>
+    <div class="bg-white w-full rounded-tl-xl p-4">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

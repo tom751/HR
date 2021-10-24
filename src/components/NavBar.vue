@@ -3,11 +3,11 @@
     <h4 class="text-3xl mt-4 font-semibold">👋 Hi Tom!</h4>
 
     <ul class="space-y-2 mt-8">
-      <NavLink :active="true"><HomeIcon class="mr-4" /> Home</NavLink>
-      <NavLink><ProfileIcon class="mr-4" /> Your details</NavLink>
-      <NavLink><PlaneIcon class="mr-4" /> Holidays</NavLink>
-      <NavLink><HospitalIcon class="mr-4" /> Sickness</NavLink>
-      <NavLink><CashIcon class="mr-4" /> Payslips</NavLink>
+      <NavLink to="/"><HomeIcon class="mr-4" /> Home</NavLink>
+      <NavLink to="/details"><ProfileIcon class="mr-4" /> Your details</NavLink>
+      <NavLink to="/holidays"><PlaneIcon class="mr-4" /> Holidays</NavLink>
+      <NavLink to="/sickness"><HospitalIcon class="mr-4" /> Sickness</NavLink>
+      <NavLink to="/payslips"><CashIcon class="mr-4" /> Payslips</NavLink>
     </ul>
   </nav>
 </template>
