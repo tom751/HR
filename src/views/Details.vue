@@ -4,7 +4,7 @@
     <form>
       <div class="grid place-items-center">
         <p class="mb-4 font-semibold text-gray-700">Photo</p>
-        <img :src="card.avatar" alt="profile picture" class="rounded-full ring-4 ring-indigo-200" />
+        <img :src="avatarUrl" alt="profile picture" class="rounded-full ring-4 ring-indigo-200" />
       </div>
       <div class="grid grid-cols-2 gap-x-8 gap-y-6 mt-8 mb-6">
         <div>
@@ -22,6 +22,10 @@
         <div>
           <label for="phone">Phone number</label>
           <input type="tel" id="phone" v-model="phone" />
+        </div>
+        <div>
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" v-model="dob" />
         </div>
         <div class="col-span-2">
           <label for="address1">Address line 1</label>
@@ -48,15 +52,15 @@
       <div class="grid grid-cols-2 gap-x-8 gap-y-6 mt-8">
         <div>
           <p class="font-bold">Job title</p>
-          <p>{{ job }}</p>
+          <p>{{ user.jobTitle }}</p>
         </div>
         <div>
           <p class="font-bold">Line Manager</p>
-          <p>{{ lineManager }}</p>
+          <p>{{ user.lineManager }}</p>
         </div>
         <div>
           <p class="font-bold">Employment start date</p>
-          <p>01/10/2021</p>
+          <p>{{ user.employmentStartDate }}</p>
         </div>
       </div>
     </section>
@@ -64,21 +68,22 @@
 </template>
 
 <script setup lang="ts">
-import faker from 'faker';
 import { ref } from 'vue';
+import { useStore } from '../store';
 
-const firstName = ref('');
-const lastName = ref('');
-const email = ref('');
-const phone = ref('');
-const addressLineOne = ref('');
-const addressLineTwo = ref('');
-const town = ref('');
-const postcode = ref('');
+const store = useStore();
+const user = store.state.user;
 
-const card = faker.helpers.contextualCard();
-const job = faker.name.jobTitle();
-const lineManager = faker.name.findName();
+const avatarUrl = user.avatarUrl;
+const firstName = ref(user.firstName);
+const lastName = ref(user.lastName);
+const email = ref(user.email);
+const dob = ref(user.dob);
+const phone = ref(user.phoneNumber);
+const addressLineOne = ref(user.addressLineOne);
+const addressLineTwo = ref(user.addressLineTwo);
+const town = ref(user.town);
+const postcode = ref(user.postcode);
 </script>
 
 <style></style>

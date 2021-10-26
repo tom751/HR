@@ -10,7 +10,8 @@
   "dependencies": {
     "faker": "^5.5.3",
     "vue": "^3.2.16",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/faker": "^5.5.9",
