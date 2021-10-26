@@ -1,5 +1,29 @@
 <template>
-  <nav class="h-screen w-full max-w-xs px-6 py-8 flex flex-col">
+  <div class="bg-indigo-400 flex justify-end text-gray-200 md:hidden">
+    <button class="focus:bg-indigo-800 focus:ring-0 p-4" @click="showSidebar = !showSidebar">
+      <MenuIcon class="h-7 w-7" />
+    </button>
+  </div>
+  <nav
+    class="
+      h-screen
+      w-full
+      max-w-xs
+      px-6
+      py-8
+      flex flex-col
+      absolute
+      inset-y-0
+      left-0
+      trasnform
+      transition
+      duration-200
+      ease-in-out
+      bg-indigo-50
+      md:relative md:translate-x-0
+    "
+    :class="{ '-translate-x-full': showSidebar }"
+  >
     <h4 class="text-3xl font-semibold">👋 Hi {{ firstName }}!</h4>
 
     <ul class="space-y-2 mt-8">
@@ -14,12 +38,14 @@
 </template>
 
 <script setup lang="ts">
-import { HomeIcon, UserCircleIcon, CalendarIcon, CashIcon, EmojiSadIcon } from '@heroicons/vue/outline';
+import { HomeIcon, UserCircleIcon, CalendarIcon, CashIcon, EmojiSadIcon, MenuIcon } from '@heroicons/vue/outline';
 import NavLink from '../nav/NavLink.vue';
 import NavProfile from '../nav/NavProfile.vue';
 import { useStore } from '../../store';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const store = useStore();
 const firstName = computed(() => store.state.user.firstName);
+
+const showSidebar = ref(false);
 </script>
