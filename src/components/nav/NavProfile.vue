@@ -6,7 +6,7 @@
       <p class="truncate">{{ job }}</p>
     </div>
     <button class="ml-auto">
-      <LogoutIcon />
+      <LogoutIcon class="h-7 w-7" />
     </button>
   </div>
 </template>
@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useStore } from '../../store';
-import LogoutIcon from '../icons/LogoutIcon.vue';
+import { LogoutIcon } from '@heroicons/vue/outline';
 
 const store = useStore();
 const job = computed(() => store.state.user.jobTitle);

@@ -8,6 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@heroicons/vue": "^1.0.5",
     "faker": "^5.5.3",
     "vue": "^3.2.16",
     "vue-router": "4",
