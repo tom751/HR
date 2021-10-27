@@ -3,7 +3,7 @@
     <PageTitle>Your details</PageTitle>
     <form>
       <div class="grid place-items-center">
-        <p class="mb-4 font-semibold text-gray-700">Photo</p>
+        <p class="mb-4 font-semibold">Photo</p>
         <img :src="avatarUrl" alt="profile picture" class="rounded-full ring-4 ring-indigo-200" />
       </div>
       <div class="grid grid-cols-2 gap-x-8 gap-y-6 mt-8 mb-6">

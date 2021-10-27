@@ -1,5 +1,5 @@
 <template>
-  <button class="bg-indigo-300 py-2 px-4 rounded" @click.prevent="onClick"><slot /></button>
+  <button class="bg-indigo-300 dark:bg-indigo-700 py-2 px-4 rounded" @click.prevent="onClick"><slot /></button>
 </template>
 
 <script setup lang="ts">

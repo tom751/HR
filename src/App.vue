@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-indigo-50 md:flex min-h-screen">
+  <div class="bg-indigo-50 dark:bg-indigo-900 md:flex min-h-screen">
     <NavBar />
-    <div class="bg-white shadow-2xl w-full rounded-tl-xl p-8 py-20">
+    <div class="bg-white dark:bg-gray-800 shadow-2xl w-full rounded-tl-xl p-8 py-20">
       <router-view></router-view>
     </div>
   </div>
