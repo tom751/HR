@@ -1,6 +1,6 @@
 <template>
   <div class="bg-indigo-400 dark:bg-indigo-800 flex justify-end text-gray-200 md:hidden">
-    <button class="focus:bg-indigo-800 dark:focus:bg-indigo-600 focus:ring-0 p-4" @click="showSidebar = !showSidebar">
+    <button class="focus:bg-indigo-800 dark:focus:bg-indigo-600 focus:ring-0 p-4" @click="hideSidebar = !hideSidebar">
       <MenuIcon class="h-7 w-7" />
     </button>
   </div>
@@ -24,7 +24,7 @@
 	  dark:text-gray-200
       md:relative md:translate-x-0
     "
-    :class="{ '-translate-x-full': showSidebar }"
+    :class="{ '-translate-x-full': hideSidebar }"
   >
     <h4 class="text-3xl font-semibold">👋 Hi {{ firstName }}!</h4>
 
@@ -49,5 +49,5 @@ import { computed, ref } from 'vue'
 const store = useStore()
 const firstName = computed(() => store.state.user.firstName)
 
-const showSidebar = ref(false)
+const hideSidebar = ref(true)
 </script>
