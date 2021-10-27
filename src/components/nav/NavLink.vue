@@ -7,24 +7,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 const props = defineProps({
   to: {
     type: String,
     required: true,
   },
-});
+})
 
-const route = useRoute();
+const route = useRoute()
 
-const active = ref(route.path === props.to);
+const active = ref(route.path === props.to)
 
 watch(
   () => route.path,
   (newPath: string) => {
-    active.value = newPath === props.to;
+    active.value = newPath === props.to
   }
-);
+)
 </script>

@@ -68,22 +68,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useStore } from '../store';
+import { ref } from 'vue'
+import { useStore } from '../store'
 
-const store = useStore();
-const user = store.state.user;
+const store = useStore()
+const user = store.state.user
 
-const avatarUrl = user.avatarUrl;
-const firstName = ref(user.firstName);
-const lastName = ref(user.lastName);
-const email = ref(user.email);
-const dob = ref(user.dob);
-const phone = ref(user.phoneNumber);
-const addressLineOne = ref(user.addressLineOne);
-const addressLineTwo = ref(user.addressLineTwo);
-const town = ref(user.town);
-const postcode = ref(user.postcode);
+const avatarUrl = user.avatarUrl
+const firstName = ref(user.firstName)
+const lastName = ref(user.lastName)
+const email = ref(user.email)
+const dob = ref(user.dob)
+const phone = ref(user.phoneNumber)
+const addressLineOne = ref(user.addressLineOne)
+const addressLineTwo = ref(user.addressLineTwo)
+const town = ref(user.town)
+const postcode = ref(user.postcode)
 </script>
 
 <style></style>

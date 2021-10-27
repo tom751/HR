@@ -3,9 +3,9 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['click']);
+const emit = defineEmits(['click'])
 
 function onClick() {
-  emit('click');
+  emit('click')
 }
 </script>

@@ -12,12 +12,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useStore } from '../../store';
-import { LogoutIcon } from '@heroicons/vue/outline';
+import { computed } from 'vue'
+import { useStore } from '../../store'
+import { LogoutIcon } from '@heroicons/vue/outline'
 
-const store = useStore();
-const job = computed(() => store.state.user.jobTitle);
-const avatarUrl = computed(() => store.state.user.avatarUrl);
-const fullName = computed(() => store.getters.fullName);
+const store = useStore()
+const job = computed(() => store.state.user.jobTitle)
+const avatarUrl = computed(() => store.state.user.avatarUrl)
+const fullName = computed(() => store.getters.fullName)
 </script>
