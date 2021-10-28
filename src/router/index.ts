@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Details from '../views/Details.vue'
-import Holidays from '../views/Holidays.vue'
-import Home from '../views/Home.vue'
-import Payslips from '../views/Payslips.vue'
-import Sickness from '../views/Sickness.vue'
+import Details from '@/views/Details.vue'
+import Holidays from '@/views/Holidays.vue'
+import Home from '@/views/Home.vue'
+import Payslips from '@/views/Payslips.vue'
+import Sickness from '@/views/Sickness.vue'
 import { RouteNames, RoutePaths } from './enums'
 
 const routes: RouteRecordRaw[] = [

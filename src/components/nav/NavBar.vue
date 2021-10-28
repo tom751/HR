@@ -41,9 +41,9 @@
 
 <script setup lang="ts">
 import { HomeIcon, UserCircleIcon, CalendarIcon, CashIcon, EmojiSadIcon, MenuIcon } from '@heroicons/vue/outline'
-import NavLink from '../nav/NavLink.vue'
-import NavProfile from '../nav/NavProfile.vue'
-import { useStore } from '../../store'
+import NavLink from '@/components/nav/NavLink.vue'
+import NavProfile from '@/components/nav/NavProfile.vue'
+import { useStore } from '@/store'
 import { computed, ref } from 'vue'
 
 const store = useStore()
