@@ -4,6 +4,7 @@ export enum RouteNames {
   Holidays = 'Holidays',
   Sickness = 'Sickness',
   Payslips = 'Payslips',
+  Login = 'Login',
 }
 
 export enum RoutePaths {
@@ -12,4 +13,5 @@ export enum RoutePaths {
   Holidays = '/holidays',
   Sickness = '/sickness',
   Payslips = '/payslips',
+  Login = '/login',
 }

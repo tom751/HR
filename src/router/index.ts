@@ -4,6 +4,7 @@ import Holidays from '@/views/Holidays.vue'
 import Home from '@/views/Home.vue'
 import Payslips from '@/views/Payslips.vue'
 import Sickness from '@/views/Sickness.vue'
+import Login from '@/views/Login.vue'
 import { RouteNames, RoutePaths } from './enums'
 
 const routes: RouteRecordRaw[] = [
@@ -12,6 +13,7 @@ const routes: RouteRecordRaw[] = [
   { path: RoutePaths.Holidays, name: RouteNames.Holidays, component: Holidays },
   { path: RoutePaths.Sickness, name: RouteNames.Sickness, component: Sickness },
   { path: RoutePaths.Payslips, name: RouteNames.Payslips, component: Payslips },
+  { path: RoutePaths.Login, name: RouteNames.Login, component: Login },
 ]
 
 export default createRouter({

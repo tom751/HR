@@ -8,10 +8,14 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        waves: "url('./src/assets/waves.svg')",
+      },
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
