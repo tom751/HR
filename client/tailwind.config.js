@@ -6,7 +6,7 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      sans: ['Raleway', ...defaultTheme.fontFamily.sans],
     },
     extend: {
       backgroundImage: {
