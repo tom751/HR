@@ -25,4 +25,8 @@ import { ref } from 'vue'
 
 const email = ref('')
 const password = ref('')
+
+function login() {
+  // implement login
+}
 </script>
