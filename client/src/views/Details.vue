@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-4xl m-auto">
+  <main class="max-w-5xl m-auto p-10 rounded-md">
     <PageTitle>Your details</PageTitle>
     <form>
       <div class="grid place-items-center">

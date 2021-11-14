@@ -1,6 +1,9 @@
 <template>
-  <li class="rounded hover:bg-indigo-100 dark:hover:bg-indigo-600 transition duration-75 ease-in" :class="{ 'bg-indigo-100 dark:bg-indigo-600': active }">
-    <router-link :to="to" class="w-full font-semibold text-left p-2 flex items-center">
+  <li
+    class="rounded-md hover:bg-indigo-100 dark:hover:bg-gray-800 transition duration-75 ease-in active:ring-0"
+    :class="{ 'bg-indigo-100 dark:bg-gray-800': active }"
+  >
+    <router-link :to="to" class="w-full font-semibold text-left p-2 flex items-center rounded-md">
       <slot />
     </router-link>
   </li>
