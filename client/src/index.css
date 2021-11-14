@@ -35,6 +35,10 @@
   }
 
   label {
-    @apply block font-semibold text-gray-700 dark:text-gray-200 mb-2;
+    @apply block font-bold text-gray-700 dark:text-gray-200 mb-2;
+  }
+
+  hr {
+    @apply opacity-20 rounded-full;
   }
 }
