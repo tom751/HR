@@ -81,6 +81,50 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@protobuf-ts/grpcweb-transport@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@protobuf-ts/grpcweb-transport/-/grpcweb-transport-2.5.0.tgz#a571862f763aa59cd0d184d9f0f9fa6f0b0d920a"
+  integrity sha512-8NRvhcwkKyLFrV9j6C3aYtlCLvRvlCgQ0957i63NUgvteZQCP0BGwbTVEQT2n43Wh3xO/Xhb+G1nFe04S3RYSA==
+  dependencies:
+    "@protobuf-ts/runtime" "^2.5.0"
+    "@protobuf-ts/runtime-rpc" "^2.5.0"
+
+"@protobuf-ts/plugin-framework@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@protobuf-ts/plugin-framework/-/plugin-framework-2.5.0.tgz#66ec6ac7cb09d0557c7021804ba8f0a020590e41"
+  integrity sha512-bOf6oP4P0rjNp7bS8NSF/4O9a2WqHb3SSl4aNYzsNvtEddmC5laMfaUGr+6IePzgCNNl19w4wG4m981NSFZDqw==
+  dependencies:
+    "@protobuf-ts/runtime" "^2.5.0"
+    typescript "^3.9"
+
+"@protobuf-ts/plugin@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@protobuf-ts/plugin/-/plugin-2.5.0.tgz#0c90e7ee5f2f57ee2b6551a9b6d081b9fbf614af"
+  integrity sha512-+lTtBPZad4gGE9eh9lMn+Fq79u4JB8YY/7uEmJSl8pk+4vMp6W02TxWYBMW4gBh5hzcZHGdEBx90OQxt1MDeJQ==
+  dependencies:
+    "@protobuf-ts/plugin-framework" "^2.5.0"
+    "@protobuf-ts/protoc" "^2.5.0"
+    "@protobuf-ts/runtime" "^2.5.0"
+    "@protobuf-ts/runtime-rpc" "^2.5.0"
+    typescript "^3.9"
+
+"@protobuf-ts/protoc@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@protobuf-ts/protoc/-/protoc-2.5.0.tgz#0eabe13f001dc828aa0a7ebcf6beadf8056600d7"
+  integrity sha512-zrvKEOMKRFNb51Rrhghq4zWxoVCDEYmJJSUmbeTWoYl67u2DyWQMbFQy3HkwjF4kmhJUsG6HQdQHdcPBk4Yo6A==
+
+"@protobuf-ts/runtime-rpc@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@protobuf-ts/runtime-rpc/-/runtime-rpc-2.5.0.tgz#6c05c99c4b21dd7fbf1fe8398cec0515fc91f6a4"
+  integrity sha512-zO5W1/66Ok68muvmjG0+ucTWTfzhCUurnqyspqcWGF9DDgGKSmrtR8V1MRV051UoTonOxm7NZZvM6VTbBv9DcA==
+  dependencies:
+    "@protobuf-ts/runtime" "^2.5.0"
+
+"@protobuf-ts/runtime@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@protobuf-ts/runtime/-/runtime-2.5.0.tgz#5264efa9b509cb1f6d9ccad7cbb3182430149cbe"
+  integrity sha512-ClfuZQ3iPVABJ0CXLGI044eox1PtmrIbbXZaHYczdFJjaxxn8U7vnwb1dPBM9JZ2I6H1VLZu8A9Z5nRv7zydsg==
+
 "@tailwindcss/forms@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.3.4.tgz#e4939dc16450eccf4fd2029770096f38cbb556d4"
@@ -92,11 +136,6 @@
   version "5.5.9"
   resolved "https://registry.yarnpkg.com/@types/faker/-/faker-5.5.9.tgz#588ede92186dc557bff8341d294335d50d255f0c"
   integrity sha512-uCx6mP3UY5SIO14XlspxsGjgaemrxpssJI0Ol+GfhxtcKpv9pgRZYsS4eeKeHVLje6Qtc8lGszuBI461+gVZBA==
-
-"@types/google-protobuf@^3.15.5":
-  version "3.15.5"
-  resolved "https://registry.yarnpkg.com/@types/google-protobuf/-/google-protobuf-3.15.5.tgz#644b2be0f5613b1f822c70c73c6b0e0b5b5fa2ad"
-  integrity sha512-6bgv24B+A2bo9AfzReeg5StdiijKzwwnRflA8RLd1V4Yv995LeTmo0z69/MPbBDFSiZWdZHQygLo/ccXhMEDgw==
 
 "@types/node@^16.11.6":
   version "16.11.6"
@@ -830,20 +869,10 @@ glob@^7.0.0, glob@^7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-google-protobuf@^3.19.1:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/google-protobuf/-/google-protobuf-3.19.1.tgz#5af5390e8206c446d8f49febaffd4b7f4ac28f41"
-  integrity sha512-Isv1RlNC+IzZzilcxnlVSf+JvuhxmY7DaxYCBy+zPS9XVuJRtlTTIXR9hnZ1YL1MMusJn/7eSy2swCzZIomQSg==
-
 graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
-
-grpc-web@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/grpc-web/-/grpc-web-1.3.0.tgz#4c36d97e7a7b6102a7df463e7822cd86d4f65ed8"
-  integrity sha512-nePImtnrnkZLErFq00Sr1H6AqaRrRptOJEhjUnlTB6RiJgs8ULYvRI9cX2hDwMvyYgakmO3H/wThYvS+Ibdreg==
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -1584,6 +1613,11 @@ token-stream@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/token-stream/-/token-stream-1.0.0.tgz#cc200eab2613f4166d27ff9afc7ca56d49df6eb4"
   integrity sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=
+
+typescript@^3.9:
+  version "3.9.10"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
+  integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
 typescript@^4.4.3:
   version "4.4.4"

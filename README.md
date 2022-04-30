@@ -42,15 +42,3 @@ yarn dev
 ```sh
 ./build-protos.sh
 ```
-
-This outputs js/ts files to `client/src/types` and Go files to `/pb`.
-Since the js/ts generation don't support ES modules, some extra replacements are done in the generated files to get them to work with Vite. Furthermore, when importing types in the client from a `.d.ts` file you must **not** use destructuring. For example:
-
-```ts
-import { LoginDetails } from '@/types/hr_pb'; // Don't do this
-
-import hr from '@/types/hr_pb'; // Do this
-const details: hr.LoginDetails;
-```
-
-I am hoping there will be a better solution for that in the near future.
