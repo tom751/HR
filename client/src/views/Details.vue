@@ -4,7 +4,7 @@
     <form>
       <div class="grid place-items-center">
         <p class="mb-4 font-semibold">Photo</p>
-        <img :src="avatarUrl" alt="profile picture" class="rounded-full ring-4 ring-indigo-200" />
+        <img :src="state.avatarUrl" alt="profile picture" class="rounded-full ring-4 ring-indigo-200" />
       </div>
 
       <div class="grid grid-cols-6 mt-8 mb-6">
@@ -15,39 +15,39 @@
         <div class="grid grid-cols-2 gap-x-8 gap-y-6 col-start-3 col-span-4">
           <div>
             <label for="firstName">First name</label>
-            <input type="text" id="firstName" v-model="firstName" />
+            <input type="text" id="firstName" v-model="state.firstName" />
           </div>
           <div>
             <label for="lastName">Last name</label>
-            <input type="text" id="lastName" v-model="lastName" />
+            <input type="text" id="lastName" v-model="state.lastName" />
           </div>
           <div>
             <label for="email">Email</label>
-            <input type="email" id="email" v-model="email" />
+            <input type="email" id="email" v-model="state.email" />
           </div>
           <div>
             <label for="phone">Phone number</label>
-            <input type="tel" id="phone" v-model="phone" />
+            <input type="tel" id="phone" v-model="state.phone" />
           </div>
           <div>
             <label for="dob">Date of birth</label>
-            <input type="date" id="dob" v-model="dob" />
+            <input type="date" id="dob" v-model="state.dob" />
           </div>
           <div class="col-span-2">
             <label for="address1">Address line 1</label>
-            <input type="text" id="address1" v-model="addressLineOne" />
+            <input type="text" id="address1" v-model="state.addressLineOne" />
           </div>
           <div class="col-span-2">
             <label for="address2">Address line 2</label>
-            <input type="text" id="address2" v-model="addressLineTwo" />
+            <input type="text" id="address2" v-model="state.addressLineTwo" />
           </div>
           <div>
             <label for="town">Town/city</label>
-            <input type="text" id="town" v-model="town" />
+            <input type="text" id="town" v-model="state.town" />
           </div>
           <div>
             <label for="postcode">Postcode</label>
-            <input type="text" id="postcode" v-model="postcode" />
+            <input type="text" id="postcode" v-model="state.postcode" />
           </div>
           <Button class="place-self-start">Save</Button>
         </div>
@@ -63,15 +63,15 @@
         <div class="grid grid-cols-2 gap-x-8 gap-y-6 col-start-3 col-span-4">
           <div>
             <p class="font-bold">Job title</p>
-            <p>{{ user.jobTitle }}</p>
+            <p>{{ state.jobTitle }}</p>
           </div>
           <div>
             <p class="font-bold">Line Manager</p>
-            <p>{{ user.lineManager }}</p>
+            <p>{{ state.lineManager }}</p>
           </div>
           <div>
             <p class="font-bold">Employment start date</p>
-            <p>{{ user.employmentStartDate }}</p>
+            <p>{{ state.employmentStartDate }}</p>
           </div>
         </div>
       </div>
@@ -80,22 +80,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useStore } from '@/store'
+import { reactive } from 'vue'
+import { useAuthStore } from '@/store'
 
-const store = useStore()
-const user = store.state.user
+const store = useAuthStore()
+const user = store.user
 
-const avatarUrl = user.avatarUrl
-const firstName = ref(user.firstName)
-const lastName = ref(user.lastName)
-const email = ref(user.email)
-const dob = ref(user.dob)
-const phone = ref(user.phoneNumber)
-const addressLineOne = ref(user.addressLineOne)
-const addressLineTwo = ref(user.addressLineTwo)
-const town = ref(user.town)
-const postcode = ref(user.postcode)
+const state = reactive({
+  avatarUrl: user?.avatarUrl,
+  firstName: user?.firstName,
+  lastName: user?.lastName,
+  email: user?.email,
+  jobTitle: user?.jobTitle,
+  dob: '',
+  phone: '',
+  addressLineOne: '',
+  addressLineTwo: '',
+  town: '',
+  postcode: '',
+  lineManager: '',
+  employmentStartDate: '',
+})
 </script>
-
-<style></style>

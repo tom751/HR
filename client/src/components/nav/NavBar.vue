@@ -5,27 +5,10 @@
     </button>
   </div>
   <nav
-    class="
-      h-screen
-      w-full
-      max-w-xs
-      px-6
-      py-8
-      flex flex-col
-      absolute
-      inset-y-0
-      left-0
-      trasnform
-      transition
-      duration-200
-      ease-in-out
-      bg-indigo-50
-      dark:bg-gray-900 dark:text-gray-200
-      md:relative md:translate-x-0
-    "
+    class="h-screen w-full max-w-xs px-6 py-8 flex flex-col absolute inset-y-0 left-0 trasnform transition duration-200 ease-in-out bg-indigo-50 dark:bg-gray-900 dark:text-gray-200 md:relative md:translate-x-0"
     :class="{ '-translate-x-full': hideSidebar }"
   >
-    <h4 class="text-3xl font-semibold">👋 Hi {{ firstName }}!</h4>
+    <h4 class="text-3xl font-semibold">👋 Hi {{ store.user?.firstName }}!</h4>
 
     <ul class="space-y-2 mt-8">
       <NavLink to="/"><HomeIcon class="mr-4 h-8 w-8" /> Home</NavLink>
@@ -42,11 +25,10 @@
 import { HomeIcon, UserCircleIcon, CalendarIcon, CashIcon, EmojiSadIcon, MenuIcon } from '@heroicons/vue/outline'
 import NavLink from '@/components/nav/NavLink.vue'
 import NavProfile from '@/components/nav/NavProfile.vue'
-import { useStore } from '@/store'
-import { computed, ref } from 'vue'
+import { useAuthStore } from '@/store'
+import { ref } from 'vue'
 
-const store = useStore()
-const firstName = computed(() => store.state.user.firstName)
+const store = useAuthStore()
 
 const hideSidebar = ref(true)
 </script>
