@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  proxy:
+    build:
+      dockerfile: Dockerfile
+      context: envoy
+    ports:
+      - '4000:4000'
+  server:
+    # build:
+    #   dockerfile: DockerFile
+    #   context: server
+    image: cosmtrek/air
+    working_dir: /hr
+    volumes:
+      - ./server:/hr
+    ports:
+      - '5000:5000'

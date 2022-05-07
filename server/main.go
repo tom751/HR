@@ -22,11 +22,11 @@ func (s *HrServer) Login(ctx context.Context, in *pb.LoginDetails) (*pb.User, er
 	log.Printf("Received: %v", in.GetEmail())
 
 	if in.GetEmail() != "a@a.com" {
-		return nil, errors.New("Invalid email or password")
+		return nil, errors.New("invalid email or password")
 	}
 
 	if in.GetPassword() != "password" {
-		return nil, errors.New("Invalid email or password")
+		return nil, errors.New("invalid email or password")
 	}
 
 	return &pb.User{FirstName: "John", LastName: "Smith", Email: in.GetEmail(), JobTitle: "Software engineer", Id: "ABC123"}, nil

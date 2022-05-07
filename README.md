@@ -8,37 +8,29 @@ Yes
 
 # Run
 
-## Envoy proxy
-
-Runs on port 4000, forwards to Go gRPC server listening on port 5000. All requests from the browser must go to port 4000.
-
 ```sh
-cd envoy
-docker build -t envoy:v1 .
-docker run --network=host envoy:v1
+docker-compose up
+cd client
+yarn # first run only
+yarn dev
 ```
 
-## Go gRPC server
-
-Runs on port 5000.
+# Generate Go and TypeScript files from proto
 
 ```sh
-cd server
-go run main.go
+./build-protos.sh
 ```
+
+# Architecture
 
 ## Vue 3 (Vite) client
 
 Runs on http://localhost:3000
 
-```sh
-cd client
-yarn
-yarn dev
-```
+## Envoy proxy
 
-# Generate Go and js/ts files from proto
+Runs on port 4000, forwards to Go gRPC server listening on port 5000. All requests from the browser must go to port 4000.
 
-```sh
-./build-protos.sh
-```
+## Go gRPC server
+
+Runs on port 5000.
