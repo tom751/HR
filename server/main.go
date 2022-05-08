@@ -29,7 +29,7 @@ func (s *HrServer) Login(ctx context.Context, in *pb.LoginDetails) (*pb.User, er
 		return nil, errors.New("invalid email or password")
 	}
 
-	return &pb.User{FirstName: "John", LastName: "Smith", Email: in.GetEmail(), JobTitle: "Software engineer", Id: "ABC123"}, nil
+	return &pb.User{FirstName: "Bob", LastName: "Smith", Email: in.GetEmail(), JobTitle: "Software engineer", Id: "ABC123"}, nil
 }
 
 func main() {

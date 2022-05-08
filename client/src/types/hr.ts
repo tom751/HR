@@ -49,6 +49,10 @@ export interface User {
      * @generated from protobuf field: string jobTitle = 5;
      */
     jobTitle: string;
+    /**
+     * @generated from protobuf field: string avatarUrl = 6;
+     */
+    avatarUrl: string;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class LoginDetails$Type extends MessageType<LoginDetails> {
@@ -112,11 +116,12 @@ class User$Type extends MessageType<User> {
             { no: 2, name: "firstName", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 3, name: "lastName", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 4, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "jobTitle", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
+            { no: 5, name: "jobTitle", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 6, name: "avatarUrl", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
         ]);
     }
     create(value?: PartialMessage<User>): User {
-        const message = { id: "", firstName: "", lastName: "", email: "", jobTitle: "" };
+        const message = { id: "", firstName: "", lastName: "", email: "", jobTitle: "", avatarUrl: "" };
         globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial<User>(this, message, value);
@@ -141,6 +146,9 @@ class User$Type extends MessageType<User> {
                     break;
                 case /* string jobTitle */ 5:
                     message.jobTitle = reader.string();
+                    break;
+                case /* string avatarUrl */ 6:
+                    message.avatarUrl = reader.string();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -169,6 +177,9 @@ class User$Type extends MessageType<User> {
         /* string jobTitle = 5; */
         if (message.jobTitle !== "")
             writer.tag(5, WireType.LengthDelimited).string(message.jobTitle);
+        /* string avatarUrl = 6; */
+        if (message.avatarUrl !== "")
+            writer.tag(6, WireType.LengthDelimited).string(message.avatarUrl);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

@@ -9,5 +9,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue({
+      reactivityTransform: true, // allows setting default prop values
+    }),
+  ],
 })
